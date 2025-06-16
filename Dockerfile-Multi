@@ -1,0 +1,23 @@
+# Base image  to build NPM releted package install  [stage 1 ] [ Big image]
+
+FROM node:18 AS builder
+
+WORKDIR /app
+
+COPY package*.json /app/
+
+RUN npm install
+
+COPY . .
+
+# Base image to run the application only [stage 2] [small image]
+
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY --from=builder /app .
+
+EXPOSE 5173
+
+CMD ["npm", "run", "dev"]
