@@ -1,14 +1,23 @@
-# Build stage
-FROM node:20-alpine as build
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci
-COPY . .
-RUN npm run build
+# Getting base image for nodeJS
 
-# Production stage with Nginx
-FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+FROM node:18
+
+# making a work directory for putting a code and required files
+
+WORKDIR /app
+
+# Copy everything from source [Host] to the Destination [container]
+
+COPY . .
+
+# install packages
+
+RUN npm install
+
+# expose the application 
+
+EXPOSE 5173
+
+# serve the application 
+
+CMD ["npm", "run", "dev"]
