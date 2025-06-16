@@ -1,0 +1,23 @@
+services:
+  online_shop:
+    build:
+      context: .
+    container_name: online_shop
+    ports:
+      - "5173:5173"
+    networks:
+      - my-net
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+    networks:
+      - my-net
+
+networks:
+  my-net:
+
+
+        
