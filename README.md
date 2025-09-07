@@ -14,7 +14,7 @@ Welcome to the **Online Shop** project – our hackathon entry for Phase 1! This
 - **Linux**
 - **Docker**
 
-In this phase, your focus is on understanding the provided developer code, reviewing how these core topics are implemented, and making any necessary enhancements.
+In this phase, your focus is on understanding the provided developer code, reviewing how these core topics are implemented, and making any necessary enhancements. Best luck
 
 ---
 
