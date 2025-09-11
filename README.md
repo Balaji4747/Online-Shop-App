@@ -1,4 +1,4 @@
-# Online Shop 🛍️ for Hackathon Phase 1
+# Online Shop 🛍️ for Hackathon Phase
 
 [![Stars](https://img.shields.io/github/stars/iemafzalhassan/online_shop)](https://github.com/iemafzalhassan/online_shop)
 ![Forks](https://img.shields.io/github/forks/iemafzalhassan/online_shop)
